@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+body {
+  margin: 20px;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.wj-flexgrid:not(.changed) {
+  height: 200px;
+  width:auto;
+}
+.edited, .added, .removed {
+  width:auto;
+}
+
+.edited {
+  color: orange
+}
+
+.added {
+  color: green
+}
+
+.removed {
+  color: red
+}
+
+
+.wj-flexgrid .wj-header {
+  background-color: #4FC3F7;
+  color:white;
+  text-weight:bold;
+}
+
+.wj-cells .wj-cell.wj-state-selected{
+  background: #4DD0E1;
+}
+
+

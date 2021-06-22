@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+
+.wuiView {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.wuiView:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.wuiView:active {
+	position:relative;
+	top:1px;
+}
+
+.jqgView {
+	box-shadow:inset 0px 1px 3px 0px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:5px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #283966;
+}
+.jqgView:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+.jqgView:active {
+	position:relative;
+	top:1px;
+}
+
+
+.jsCrud {
+	box-shadow:inset 0px 1px 3px 0px #9fb4f2;
+	background:linear-gradient(to bottom, #008000 5%, #008000 100%);
+	background-color:#008000;
+	border-radius:5px;
+	border:1px solid #008000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #283966;
+}
+.jsCrud:hover {
+	background:linear-gradient(to bottom, #008000 5%, #008000 100%);
+	background-color:#008000;
+}
+.jsCrud:active {
+	position:relative;
+	top:1px;
+}
+
+.reactCrud {
+	box-shadow:inset 0px 1px 3px 0px #9fb4f2;
+	background:linear-gradient(to bottom, #800000 5%, #800000 100%);
+	background-color:#800000;
+	border-radius:5px;
+	border:1px solid #800000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #283966;
+}
+.reactCrud {
+	background:linear-gradient(to bottom, #800000 5%, #800000 100%);
+	background-color:#800000;
+}
+.reactCrud {
+	position:relative;
+	top:1px;
+}

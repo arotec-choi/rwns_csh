@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.arotec.mapper.testMapper">
+<!-- DAO의 메서드가 될 것이다. -->
+
+<!--데이터 조회 -->
+	<select id="selectTest" resultType="com.csh.vo.testVO">
+		<!-- SELECT FLOWMTR_ID,NAME,INST_DATE,FMETE_FORM,FMETE_TYPE,WTRSYS,AUTO_TYPE,PIPE_DIA,PIPE_ID,IN_AREA,OUT_AREA,ADDR,REMARK,
+		SBLOCK_ID,OFFICE_ID,STD_WHMR_V,FAC_NAME,DATA_TYPE,OUT_ZONE,FLSY_NAME,GIS_CODE,TSMTR_DATE,OFFICE,J_BLOCK,S_BLOCK,STD_WHMR,
+		USE_CLA,REP_CHK,CMC_ERR_VALUE from SBN_FLOWMTR_TEST -->
+	
+		<!--  select * from SBN_FLOWMTR_TEST ROWNUM AS recid,-->
+		SELECT ROWNUM AS recid, FLOWMTR_ID,NAME,INST_DATE,FMETE_FORM,FMETE_TYPE,WTRSYS,AUTO_TYPE,PIPE_DIA,PIPE_ID,IN_AREA,OUT_AREA,ADDR,REMARK,
+		SBLOCK_ID,OFFICE_ID,STD_WHMR_V,FAC_NAME,DATA_TYPE,OUT_ZONE,FLSY_NAME,GIS_CODE,TSMTR_DATE,OFFICE,J_BLOCK,S_BLOCK,STD_WHMR,
+		REP_CHK,CMC_ERR_VALUE from SBN_FLOWMTR_TEST
+	</select>
+	
+	<update id="updateTest" parameterType="hashMap">
+	<!-- 부등호 사용을 위한 처리 -->
+	<!-- 	update SBN_FLOWMTR_TEST 
+		
+		<set>
+		<if test="val != null">
+		NAME=#{NAME}
+		</if>
+		<if test="val != null">
+		INST_DATE=#{INST_DATE}
+		</if>
+		<if test="val != null">
+		FMETE_FORM=#{FMETE_FORM}
+		</if>
+		<if test="val != null">
+		FMETE_TYPE=#{FMETE_TYPE}
+		</if>
+		<if test="val != null">
+		WTRSYS=#{WTRSYS}
+		</if>
+		<if test="val != null">
+		AUTO_TYPE=#{AUTO_TYPE}
+		</if>
+		<if test="val != null">
+		PIPE_DIA=#{PIPE_DIA}
+		</if>
+		<if test="val != null">
+		PIPE_ID=#{PIPE_ID}
+		</if>
+		<if test="val != null">
+		IN_AREA=#{IN_AREA}
+		</if>
+		<if test="val != null">
+		OUT_AREA=#{OUT_AREA}
+		</if>
+		<if test="val != null">
+		ADDR=#{ADDR}
+		</if>
+		<if test="val != null">
+		REMARK=#{REMARK}
+		</if>
+		<if test="val != null">
+		SBLOCK_ID=#{SBLOCK_ID}
+		</if>
+		<if test="val != null">
+		OFFICE_ID=#{OFFICE_ID}
+		</if>
+		<if test="val != null">
+		STD_WHMR_V=#{STD_WHMR_V}
+		</if>
+		<if test="val != null">
+		FAC_NAME=#{FAC_NAME}
+		</if>
+		<if test="val != null">
+		DATA_TYPE=#{DATA_TYPE}
+		</if>
+		<if test="val != null">
+		OUT_ZONE=#{OUT_ZONE}
+		</if>
+		<if test="val != null">
+		FLSY_NAME=#{FLSY_NAME}
+		</if>
+		<if test="val != null">
+		GIS_CODE=#{GIS_CODE}
+		</if>
+		<if test="val != null">
+		TSMTR_DATE=#{TSMTR_DATE}
+		</if>
+		<if test="val != null">
+		OFFICE=#{OFFICE}
+		</if>
+		<if test="val != null">
+		J_BLOCK=#{J_BLOCK}
+		</if>
+		<if test="val != null">
+		S_BLOCK=#{S_BLOCK}
+		</if>
+		<if test="val != null">
+		STD_WHMR=#{STD_WHMR}
+		</if>
+		<if test="val != null">
+		REP_CHK=#{REP_CHK}
+		</if>
+		<if test="val != null">
+		CMC_ERR_VALUE=#{CMC_ERR_VALUE}
+		</if> 
+		</set>
+		
+		WHERE FLOWMTR_ID=#{FLOWMTR_ID} -->
+	 
+	
+ <![CDATA[	 
+		update SBN_FLOWMTR_TEST SET ${COL} WHERE FLOWMTR_ID=#{FLOWMTR_ID}
+	]]>
+	
+	</update>
+</mapper>

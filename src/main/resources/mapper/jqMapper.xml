@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.arotec.mapper.jqMapper">
+<!-- DAO의 메서드가 될 것이다. -->
+
+<!--데이터 조회 -->
+	<select id="getAllSelect" resultType="com.csh.vo.jqVO">
+	
+	select 
+	sngid
+	<!-- ,_geometry -->
+	,srvrsv_id
+	,srvrsv_nm
+	,scale_se
+	,ftype
+	,adres_cn
+	,fltplt_id
+	,plot_ar
+	,cnstrc_cmp
+	,cntrwk_spr
+	,tot_cntrwk
+	,fclty_cpct
+	,ground_hg
+	,undgrnd_bp
+	,srvrsv_mtr
+	,hgh_wal_hg
+	,low_wal_hg
+	,fclty_al
+	,top_al
+	,lwet_al
+	,drng_ty_dc
+	,wsp_time
+	,dail_wsp_q
+	,valve_calb
+	,valve_inst
+	,atmc_valve
+	,fence_fclt
+	,drn_pline_
+	,drn_pline1
+	,rm_cn
+	,input_de
+	,name
+	,register_i
+	,gu_id
+	,compet_de
+	,bizplc_id
+	,wsp_area_d
+	,updt_de
+	,nadres_cn
+	,adstrd_id
+	,legaldong_
+	,hydt_co
+	,wsp_gnr_co
+	,wsp_popltn
+	,fclts_cl_c
+	,explr_nm
+	,mesr_id
+	,dmo1400_id
+	,srvrsv_se
+	,view_lvl
+	,jfac_code 
+from te_srvrsv_20210520
+	
+	</select>
+	
+	<update id="dataSet" parameterType="hashMap">
+ 	update te_srvrsv_20210520
+	set
+	
+	srvrsv_id = ${srvrsv_id},
+	srvrsv_nm = ${srvrsv_nm},
+	scale_se = ${scale_se},
+	ftype = ${ftype},
+	adres_cn = ${adres_cn},
+	fltplt_id = ${fltplt_id},
+	plot_ar = ${plot_ar},
+	cnstrc_cmp = ${cnstrc_cmp},
+	cntrwk_spr = ${cntrwk_spr},
+	tot_cntrwk = ${tot_cntrwk},
+	fclty_cpct = ${fclty_cpct},
+	ground_hg = ${ground_hg},
+	undgrnd_bp = ${undgrnd_bp},
+	srvrsv_mtr = ${srvrsv_mtr},
+	hgh_wal_hg = ${hgh_wal_hg},
+	low_wal_hg = ${low_wal_hg},
+	fclty_al = ${fclty_al},
+	top_al = ${top_al},
+	lwet_al = ${lwet_al},
+	drng_ty_dc = ${drng_ty_dc},
+	wsp_time = ${wsp_time},
+	dail_wsp_q = ${dail_wsp_q},
+	valve_calb = ${valve_calb},
+	valve_inst = ${valve_inst},
+	atmc_valve = ${atmc_valve},
+	fence_fclt = ${fence_fclt},
+	drn_pline_ = ${drn_pline_},
+	drn_pline1 = ${drn_pline1},
+	rm_cn = ${rm_cn},
+	input_de = ${input_de},
+	name = ${name},
+	register_i = ${register_i},
+	gu_id = ${gu_id},
+	compet_de = ${compet_de},
+	bizplc_id = ${bizplc_id},
+	wsp_area_d = ${wsp_area_d},
+	updt_de = ${updt_de},
+	nadres_cn = ${nadres_cn},
+	adstrd_id = ${adstrd_id},
+	legaldong_ = ${legaldong_},
+	hydt_co = ${hydt_co},
+	wsp_gnr_co = ${wsp_gnr_co},
+	wsp_popltn = ${wsp_popltn},
+	fclts_cl_c = ${fclts_cl_c},
+	explr_nm = ${explr_nm},
+	mesr_id = ${mesr_id},
+	dmo1400_id = ${dmo1400_id},
+	srvrsv_se = ${srvrsv_se},
+	view_lvl = ${view_lvl},
+	jfac_code  = ${jfac_code}
+
+	where  sngid = ${sngid}
+	
+
+	</update>
+	<update id="dataCellSet" parameterType="hashMap">
+			 
+  <![CDATA[	 
+		update te_srvrsv_20210520 SET ${COL} WHERE sngid = ${sngid}
+	]]>	
+	</update>
+	
+	<delete id="dateDel"> 
+		delete from te_srvrsv_20210520 where sngid = ${id}
+	</delete>
+
+</mapper>

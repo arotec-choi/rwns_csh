@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.arotec.mapper.jsCrudMapper">
+<!-- DAO의 메서드가 될 것이다. -->
+
+<select id="getAllSelect" resultType="com.csh.vo.jsCrudVo">
+
+select * from ARO_TEST
+
+</select>
+
+<update id="jsUpdateSet" parameterType="com.csh.vo.jsCrudVo">
+update ARO_TEST
+set
+
+TEXTONE = #{TEXTONE},
+TEXTTWO = #{TEXTTWO},
+NUMBERONE = ${NUMBERONE},
+NUMBERTWO = ${NUMBERTWO},
+DATEONE = #{DATEONE},
+DATETWO = #{DATETWO},
+BOOLONE = #{BOOLONE},
+BOOLTWO = #{BOOLTWO}
+
+where NMB = #{NMB}
+	
+
+</update>
+
+<insert id="jsAdd" parameterType="com.csh.vo.jsCrudVo">
+
+<!-- <selectKey keyProperty = "nmb_seq" resultType="integer" order="BEFORE">
+   SELECT NMB_SEQ.nextval AS NMB FROM DUAL
+</selectKey> -->
+
+INSERT INTO ARO_TEST(NMB, TEXTONE, TEXTTWO, NUMBERONE, NUMBERTWO, DATEONE, DATETWO, BOOLONE, BOOLTWO)
+VALUES
+(NMB_SEQ.nextval,#{TEXTONE},#{TEXTTWO},#{NUMBERONE},#{NUMBERTWO},#{DATEONE},#{DATETWO},#{BOOLONE},#{BOOLTWO})
+
+</insert>
+
+<delete id="jsDel">
+	delete from ARO_TEST where NMB = #{NMB}
+</delete>
+
+
+</mapper>
